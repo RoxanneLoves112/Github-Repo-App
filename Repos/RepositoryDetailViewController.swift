@@ -12,10 +12,9 @@ class RepositoryDetailViewController: UIViewController {
         self.title = viewModel?.title()
 
         if let viewModel = viewModel,
-            let urlString = viewModel.URLString(),
-            let url = URL(string: urlString) {
-                let request = URLRequest(url: url)
-                webView?.loadRequest(request)
+            let url = NSURL(string: viewModel.URLString()) {
+          let request = NSURLRequest(url: url as URL)
+          webView?.loadRequest(request as URLRequest)
         }
     }
 }

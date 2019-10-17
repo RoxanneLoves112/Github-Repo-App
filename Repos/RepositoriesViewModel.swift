@@ -7,14 +7,36 @@ class RepositoriesViewModel {
   let parser = RepositoriesParser()
   
   func numberOfRows() -> Int {    
-    // Your code here
+    return repos.count
   }
   
   func titleForRowAtIndexPath(_ indexPath: IndexPath) -> String {
-    // Your code here
+    guard indexPath.row >= 0 && indexPath.row < repos.count else {
+        return ""
+    }
+    return repos[indexPath.row].name
   }
   
   func detailViewModelForRowAtIndexPath(_ indexPath: IndexPath) -> RepositoryDetailViewModel {
-    // Your code here
+    
+    return RepositoryDetailViewModel(repos[indexPath.row])
   }
+  
+  func summaryForRowAtIndexPath(indexPath: NSIndexPath) -> String {
+     guard indexPath.row >= 0 && indexPath.row < repos.count else {
+       return ""
+     }
+      
+      return repos[indexPath.row].description
+   }
+  
+  func refresh(completion: @escaping () -> Void) {
+    client.fetchRepositories { [unowned self] data in
+      if let repositories = self.parser.repositoriesFromSearchResponse(data) {
+        self.repos = repositories
+      }
+      completion()
+    }
+  }
+  
 }

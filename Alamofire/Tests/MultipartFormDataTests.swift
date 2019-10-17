@@ -171,6 +171,8 @@ class MultipartFormDataEncodingTestCase: BaseTestCase {
                 BoundaryGenerator.boundary(forBoundaryType: .final, boundaryKey: boundary)
             ).data(using: .utf8, allowLossyConversion: false)!
 
+            print(encodedData)
+            print(expectedData)
             XCTAssertEqual(encodedData, expectedData, "encoded data should match expected data")
         }
     }

@@ -1,6 +1,17 @@
 import Foundation
 
 class RepositoryDetailViewModel {
+  let repo: Repository
     
-    // Your code here
+  init(_ repository: Repository){
+    self.repo = repository
+  }
+  
+  func title() -> String {
+    return repo.name
+  }
+  
+  func URLString() -> String {
+    return repo.htmlURL!
+  }
 }

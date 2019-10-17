@@ -23,6 +23,7 @@
 		03BAFB3A1C3F13E700114758 /* RepositoryDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BAFB391C3F13E700114758 /* RepositoryDetailViewModel.swift */; };
 		03F61F871C3F04F300A4BD24 /* invalid-response.json in Resources */ = {isa = PBXBuildFile; fileRef = 03F61F861C3F04F300A4BD24 /* invalid-response.json */; };
 		03F61F891C3F05AD00A4BD24 /* SearchRepositoriesClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F61F881C3F05AD00A4BD24 /* SearchRepositoriesClient.swift */; };
+		C8DFA8D22357C1AF0095E57C /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A36BB4A8202B718900EA2754 /* Alamofire.framework */; };
 		E7E6B40A1DD42C50009BA826 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E6B4081DD42C50009BA826 /* TableViewCell.swift */; };
 		E7E6B40B1DD42C50009BA826 /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E7E6B4091DD42C50009BA826 /* TableViewCell.xib */; };
 /* End PBXBuildFile section */
@@ -130,6 +131,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C8DFA8D22357C1AF0095E57C /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -150,6 +152,7 @@
 				0302AE8C1C3C2DC700388D27 /* ReposTests */,
 				0302AE761C3C2DC700388D27 /* Products */,
 				A36BB49C202B718800EA2754 /* Alamofire.xcodeproj */,
+				C8DFA8C92357C1AF0095E57C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -298,6 +301,13 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		C8DFA8C92357C1AF0095E57C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -367,6 +377,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -634,7 +645,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
@@ -653,7 +664,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
 		};
